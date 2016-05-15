@@ -9,8 +9,8 @@ BDIR=$SDIR/bin
 
 function usage {
     echo
-    echo "usage: $(basename $0) METHOD [FASTQ_DIR]"
-    echo "   METHOD - which processing script to use"
+    echo "usage: $(basename $0) SCRIPT_NAME [FASTQ_DIR]"
+    echo "   SCRIPT_NAME - which processing script to use"
     for script in $SDIR/scripts/*; do
         echo "      "$(basename $script | sed 's/.sh//')
     done

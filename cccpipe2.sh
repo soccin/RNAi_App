@@ -1,5 +1,9 @@
 #!/bin/bash
 
+#
+# START:PREAMBLE
+#
+
 SDIR="$( cd "$( dirname "$0" )" && pwd )"
 BDIR=$SDIR/bin
 
@@ -23,6 +27,10 @@ if [ "$NUMFILES" == "0" ]; then
     usage
     exit
 fi
+
+#
+# END:PREAMBLE
+#
 
 mkdir -p Results
 

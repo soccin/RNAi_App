@@ -55,10 +55,10 @@ STAG=$(basename $0 | sed 's/.sh//')
 mkdir -p Results
 
 for FILE in $FASTQ_DIR/*fastq; do
+
     BASE=$(basename $FILE | sed 's/.fastq//')
     echo "Processing $FILE"
-    #cat $FILE \
-    #
-    #>Results/result-${STAG}-${BASE}.txt
+    $SDIR/scripts/$SCRIPT.sh $FILE >Results/result-${SCRIPT}-${BASE}.txt
+
 done
 

@@ -32,6 +32,7 @@ fi
 # END:PREAMBLE
 #
 
+STAG=$(basename $0 | sed 's/.sh//')
 mkdir -p Results
 
 for FILE in $FASTQ_DIR/*fastq; do
@@ -44,7 +45,7 @@ for FILE in $FASTQ_DIR/*fastq; do
     | $BDIR/fastx_reverse_complement \
     | $BDIR/fasta_formatter -t \
     | tr '-' '\t'  \
-    | cut -f 3,2 >Results/result-${BASE}.txt
+    | cut -f 3,2 >Results/result-${STAG}-${BASE}.txt
 
 done
 

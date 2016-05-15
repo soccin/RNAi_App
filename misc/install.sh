@@ -2,6 +2,7 @@
 
 SDIR="$( cd "$( dirname "$0" )" && pwd )"
 echo $SDIR
+PDIR=$(echo $SDIR | sed 's/.misc//')
 
 function setPath {
 
@@ -10,7 +11,7 @@ function setPath {
     if [ "$checkMarker" == "" ]; then
         echo >> $file
         echo "# RNAi_App.V4" >> $file
-        echo PATH=\"$SDIR\":\$PATH >> $file
+        echo PATH=\"$PDIR\":\$PATH >> $file
         echo >> $file
     fi
 

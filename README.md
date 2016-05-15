@@ -1,4 +1,4 @@
-# RNAi_App
+# RNAi Application: RNAiApp.sh
 
 Application to process FASTQ using one of the various RNAi/shRNA/siRNA processing scripts from Qi Chao. See the install doc for installation instructions. If the program has been properly installed then you should be able to run the script from any folder/directory by typing 
 

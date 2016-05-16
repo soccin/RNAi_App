@@ -11,6 +11,7 @@ function usage {
     echo
     echo "usage: $(basename $0) SCRIPT_NAME [FASTQ_DIR]"
     echo "   SCRIPT_NAME - which processing script to use"
+    echo "   Scripts currently available:"
     for script in $SDIR/scripts/*; do
         echo "      "$(basename $script | sed 's/.sh//')
     done

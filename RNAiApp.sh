@@ -14,10 +14,12 @@ function usage {
     echo "Usage: $(basename $0) SCRIPT_NAME [FASTQ_DIR]"
     echo
     echo "   SCRIPT_NAME - which processing script to use"
-    echo "   Scripts currently available:"
-    for script in $SDIR/scripts/*; do
-        echo "      "$(basename $script | sed 's/.sh//')
-    done
+    echo
+    echo "Scripts currently available:"
+    echo
+
+    ls scripts/*.sh | sed 's/scripts.//' | sed 's/.sh//' | column -c 60 -x
+
     echo
 }
 

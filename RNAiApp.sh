@@ -9,7 +9,10 @@ BDIR=$SDIR/bin
 
 function usage {
     echo
-    echo "usage: $(basename $0) SCRIPT_NAME [FASTQ_DIR]"
+    cat $SDIR/VERSION
+    echo
+    echo "Usage: $(basename $0) SCRIPT_NAME [FASTQ_DIR]"
+    echo
     echo "   SCRIPT_NAME - which processing script to use"
     echo "   Scripts currently available:"
     for script in $SDIR/scripts/*; do

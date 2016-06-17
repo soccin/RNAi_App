@@ -18,7 +18,7 @@ function usage {
     echo "Scripts currently available:"
     echo
 
-    ls scripts/*.sh | sed 's/scripts.//' | sed 's/.sh//' | column -c 60 -x
+    ls $SDIR/scripts/*.sh | sed 's/.*\///' | sed 's/.sh//' | column -c 60 -x
 
     echo
 }

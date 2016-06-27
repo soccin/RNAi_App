@@ -60,6 +60,7 @@ fi
 STAG=$(basename $0 | sed 's/.sh//')
 mkdir -p Results
 
+echo
 for FILE in $FASTQ_DIR/*fastq; do
 
     BASE=$(basename $FILE | sed 's/.fastq//')

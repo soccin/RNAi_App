@@ -65,6 +65,9 @@ for FILE in $FASTQ_DIR/*fastq; do
     BASE=$(basename $FILE | sed 's/.fastq//')
     echo "Processing $FILE"
     $SDIR/scripts/$SCRIPT.sh $FILE >Results/result-${SCRIPT}-${BASE}.txt
+    sum=$(awk '{s+=$1}END{print s}' Results/result-${SCRIPT}-${BASE}.txt)
+    echo "Sum of counts result-${SCRIPT}-${BASE}.txt = $sum"
+    echo
 
 done
 

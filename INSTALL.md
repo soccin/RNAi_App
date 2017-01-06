@@ -1,11 +1,11 @@
 # INSTALL 
 
-* Download latest release (https://github.com/soccin/RNAi_App/archive/v1.2.2.zip)
+* Download latest release (https://github.com/soccin/RNAi_App/archive/v1.2.3.zip)
 
 * Then copy to Applications folder and set permissions
 
 ```bash
-mv RNAi_App-1.2.2 /Applications
+mv RNAi_App-1.2.3 /Applications
 sudo chmod -R uog+rX /Applications/RNAi_App
 ```
 

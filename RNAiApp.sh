@@ -44,11 +44,11 @@ else
     FASTQ_DIR=$PWD
 fi
 
-NUMFILES=$(ls $FASTQ_DIR/*fastq | wc -l | awk '{print $1}')
+NUMFILES=$(ls $FASTQ_DIR/*fastq $FASTQ_DIR/*fastq.gz | wc -l | awk '{print $1}')
 if [ "$NUMFILES" == "0" ]; then
     usage
     echo "   Must specify directory with some FASTQ files"
-    echo "   e.g. XXXX.fastq"
+    echo "   e.g. XXXX.fastq or YYYY.fastq.gz"
     echo
     exit
 fi
@@ -72,3 +72,13 @@ for FILE in $FASTQ_DIR/*fastq; do
 
 done
 
+for FILE in $FASTQ_DIR/*fastq.gz; do
+
+    BASE=$(basename $FILE | sed 's/.fastq.gz//')
+    echo "Processing $FILE"
+    $SDIR/scripts/$SCRIPT.sh <(gzcat $FILE) >Results/result-${SCRIPT}-${BASE}.txt
+    sum=$(awk '{s+=$1}END{print s}' Results/result-${SCRIPT}-${BASE}.txt)
+    echo "Sum of counts result-${SCRIPT}-${BASE}.txt = $sum"
+    echo
+
+done

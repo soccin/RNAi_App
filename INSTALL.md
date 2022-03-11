@@ -6,7 +6,7 @@
 
 ```bash
 mv RNAi_App-1.2.3 /Applications
-sudo chmod -R uog+rX /Applications/RNAi_App
+sudo chmod -R uog+rX /Applications/RNAi_App-1.2.3
 ```
 
 * Then need to fix `PATH` for each user. For each user do:

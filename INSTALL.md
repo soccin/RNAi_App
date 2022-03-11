@@ -13,6 +13,6 @@ sudo chmod -R uog+rX /Applications/RNAi_App-1.2.3
 
 ```bash
 sudo su - <USER>
-/Applications/RNAi_App/misc/install.sh
+/Applications/RNAi_App-1.2.3/misc/install.sh
 ```
 
